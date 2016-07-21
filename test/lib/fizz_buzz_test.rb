@@ -14,4 +14,8 @@ class FizzBuzzTest < Test::Unit::TestCase
   def test_2を渡すと文字列にして返す
     assert_equal '2', @fizz_buzz.convert(2)
   end
+
+  def test_3を渡すとFizzをして返す
+    assert_equal 'Fizz', @fizz_buzz.convert(3)
+  end
 end

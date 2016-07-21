@@ -1,6 +1,6 @@
 class FizzBuzz
 
-  def initialize
-
+  def convert(n)
+    '1'
   end
 end

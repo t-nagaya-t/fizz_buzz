@@ -7,19 +7,21 @@ class FizzBuzzTest < Test::Unit::TestCase
     @fizz_buzz = FizzBuzz.new
   end
 
-  def test_1を渡すと文字列にして返す
-    assert_equal '1', @fizz_buzz.convert(1)
+  sub_test_case '3の倍数の時は数の代わりにFizzと返す' do
+    def test_3の場合
+      assert_equal 'Fizz', @fizz_buzz.convert(3)
+    end
   end
 
-  def test_2を渡すと文字列にして返す
-    assert_equal '2', @fizz_buzz.convert(2)
+  sub_test_case '5の倍数の時は数の代わりにBuzzと返す' do
+    def test_5の場合
+      assert_equal 'Buzz', @fizz_buzz.convert(5)
+    end
   end
 
-  def test_3を渡すとFizzをして返す
-    assert_equal 'Fizz', @fizz_buzz.convert(3)
-  end
-
-  def test_5を渡すとBuzzをして返す
-    assert_equal 'Buzz', @fizz_buzz.convert(5)
+  sub_test_case 'その他の場合は数を文字列にして返す' do
+    def test_1の場合
+      assert_equal '1', @fizz_buzz.convert(1)
+    end
   end
 end

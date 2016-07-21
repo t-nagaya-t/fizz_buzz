@@ -1,6 +1,6 @@
 class FizzBuzz
 
-  def convert(n)
-    n.to_s
+  def convert(number)
+    number.to_s
   end
 end
